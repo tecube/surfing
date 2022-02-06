@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import PySimpleGUI as sg
 
 
-def make_data_fig():
+def make_empty_plot():
     fig = plt.figure()
 
     ax = fig.add_subplot()
@@ -15,7 +15,7 @@ def make_data_fig():
     return fig, ax, x
 
 
-def draw_plot(offset, fig, ax, x):
+def update_plot(offset, fig, ax, x):
     ax.clear()
     ax.plot(x+offset, np.sin(x+offset))
     plt.show(block=False)
